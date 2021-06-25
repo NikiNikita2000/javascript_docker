@@ -1,0 +1,150 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<title> run ur command</title>\
+<head>\
+<style>\
+div \{\
+  display:block;\
+  font-family: "Poppins", Lato, Sans Serif;\
+\}\
+.section \{\
+  position:relative;\
+  min-height: 50vh;\
+  display:flex;\
+  flex-direction:column;\
+  align-items:center;\
+  justify-content:center;\
+\}\
+.section.bg2 \{\
+  background: center / cover url("http://jason.sandbox.etdevs.com/design/wp-content/uploads/sites/4/2021/03/404-background.jpg");\
+\}\
+.container \{\
+  position:relative;\
+  width: 100%;\
+  max-width: 80vw;\
+  padding: 3vh 0;\
+\}\
+  h1 \{\
+  font-weight: bold;\
+  text-transform:uppercase;\
+  font-size: clamp(40px, 10vw, 130px);\
+  line-height: 1.1em;\
+  color: #ffffff;\
+  text-align:center;\
+  transition-duration: 1s;\
+ \}\
+  \
+\
+\
+.text-gradient-bg h1 \{\
+  background: -webkit-linear-gradient(to right, #e8d33f, #06D6A0, #e8d33f);\
+  background: -moz-linear-gradient(to right, #e8d33f, #06D6A0, #e8d33f);\
+  background: linear-gradient(to right, #e8d33f, #06D6A0, #e8d33f);\
+  background-clip:text;\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+\}\
+.text-img-bg h1 \{\
+  background: right center / contain url("https://jason.sandbox.etdevs.com/design/wp-content/uploads/sites/4/2021/04/gradient-background-img.jpg");\
+  background-clip:text;\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+\}\
+h1:hover \{\
+        letter-spacing: 10px;\
+      \}\
+.text-gradient-bg p \{\
+  background: -webkit-linear-gradient( to bottom left,#ddd 30%,#06D6A0 100%);\
+  background: -moz-linear-gradient( to bottom left,#ddd 30%,#06D6A0 100%);\
+  background: linear-gradient( to bottom left,#ddd 30%,#06D6A0 100%);\
+  background-clip:text;\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+\}\
+\
+.text-img-bg p \{\
+  background: -webkit-linear-gradient( to bottom right,#ddd 20%,#d915b5 100%);\
+  background: -moz-linear-gradient( to bottom right,#ddd 20%,#d915b5 100%);\
+  background: linear-gradient( to bottom right,#ddd 20%,#d915b5 100%);\
+  background-clip:text;\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+\}\
+.lower \{\
+text-align: center;\
+font-size:18px;\
+ font-weight:bold;\
+\}\
+body\{\
+ background-color:deepskyblue ;\
+\}\
+\
+  button \{\
+        display: inline-block;\
+        background-color: blue;\
+        border-radius: 10px;\
+        border: 4px double #cccccc;\
+        color: #eeeeee;\
+        text-align: center;\
+        font-size: 18px;\
+        padding: 10px;\
+        width: 200px;\
+        -webkit-transition: all 0.5s;\
+        -moz-transition: all 0.5s;\
+        -o-transition: all 0.5s;\
+        transition: all 0.5s;\
+        cursor: pointer;\
+        margin: 5px;\
+      \}\
+\
+</style>\
+</head>\
+ <script>\
+function lw()\
+\{\
+\
+var i = document.getElementById("in").value\
+\
+\
+var xhr = new XMLHttpRequest();\
+xhr.open("GET", "http://192.168.29.180/cgi-bin/new.py?x=" + i, false);\
+\
+xhr.send();\
+\
+// output from above url \
+xhr.onload =lw1();\
+function lw1()\{\
+var output = xhr.responseText;\
+document.getElementById("dl").innerHTML = output;\
+\}\
+\}\
+</script>\
+\
+<div class="section bg2">\
+  <div class="container">\
+    <div class="text-img-bg">\
+<h1>DOCKER</h1>\
+     </div>\
+   </div>\
+</div>\
+<body>\
+<div class="lower" >\
+<p>Enter your docker command :<input id="in" />\
+<br />\
+<pre>\
+<div id="dl"> TYPE YOUR COMMAND TO SEE OUTPUT....</div>\
+</p>\
+<button onclick="lw()" type="button" >click me</button>\
+</pre>\
+\
+\
+     \
+</body>\
+</html>}
